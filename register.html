@@ -20,11 +20,11 @@
                     <i class='bx bxs-envelope'></i>
                 </div>
                 <div class="password">
-                    <input type="password" placeholder="Create Password" required>
+                    <input type="password" placeholder="Create Password" id="password" required>
                     <i class='bx bxs-lock-alt'></i>
                 </div>
                 <div class="confirmPassword">
-                    <input type="password" placeholder="Confirm Password" required>
+                    <input type="password" placeholder="Confirm Password" id="confirmPassword" required>
                     <i class='bx bxs-lock-alt'></i>
                 </div>
 
@@ -35,22 +35,6 @@
             </form>
         </div>
 
-        <script>
-            document.querySelector('.register').onlick = function(){
-                var password = document.querySelector('.password').value,
-                confirmPassword = document.querySelector('.confirmPassword').value;
-
-                if(password == ""){
-                    alert("Field cannot be empty!");
-                }
-                else if(password != confirmPassword){
-                    alert("Passwords do not match, please try again.");
-                    return false
-                }
-                else if(password == confirmPassword){
-                    alert("Passwords Match!");
-                }
-                return true
-            }
-        </script>
+<script src="script.js"></script>
+    
     </body>
