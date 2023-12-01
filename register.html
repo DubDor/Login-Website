@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <form action="#">
+                <h1>Register</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="Username" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Email" required>
+                    <i class='bx bxs-envelope'></i>
+                </div>
+                <div class="password">
+                    <input type="password" placeholder="Create Password" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <div class="confirmPassword">
+                    <input type="password" placeholder="Confirm Password" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+
+                <a href="index.html">
+                    <button type="button" class="cancel">Cancel</button>
+                </a>
+                <button type="submit" class="register">Register</button>
+            </form>
+        </div>
+
+        <script>
+            document.querySelector('.register').onlick = function(){
+                var password = document.querySelector('.password').value,
+                confirmPassword = document.querySelector('.confirmPassword').value;
+
+                if(password == ""){
+                    alert("Field cannot be empty!");
+                }
+                else if(password != confirmPassword){
+                    alert("Passwords do not match, please try again.");
+                    return false
+                }
+                else if(password == confirmPassword){
+                    alert("Passwords Match!");
+                }
+                return true
+            }
+        </script>
+    </body>
