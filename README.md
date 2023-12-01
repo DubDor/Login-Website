@@ -1,2 +1,2 @@
 # Login_Page
-Login page, created for one of my assignments.
+Login page, created as one of my first projects.
